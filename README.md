@@ -17,8 +17,7 @@
 [Workflow](#-workflow) •
 [Dataset](#%EF%B8%8F-dataset) •
 [Results](#-results-in-detail) •
-[Repository](#-repository-structure) •
-[Run It](#%EF%B8%8F-how-to-run)
+[Repository](#-repository-structure)
 
 </div>
 
@@ -233,7 +232,7 @@ Age ranks first here, yet logistic regression found its effect to be zero (p = 0
 ## 📁 Repository Structure
 
 ```text
-📦 hospital-readmission-analysis
+📦 repository
  ┣ 📓 hospital_readmission_analysis_ipynb.ipynb   # Full analysis notebook
  ┣ 📑 hospital_readmission_report_docx.docx       # Detailed written report (18 questions)
  ┣ 🎞️ hospital_readmission_presentation_pptx.pptx # 27-slide presentation
@@ -249,29 +248,6 @@ Age ranks first here, yet logistic regression found its effect to be zero (p = 0
 | 📑 **Report** | Reading the full statistical story, question by question |
 | 🎞️ **Presentation** | A 5-minute overview of the project |
 | 📈 **Dashboard** | Exploring the data interactively (open with Power BI Desktop) |
-
----
-
-## ⚙️ How to Run
-
-```bash
-# 1. Clone the repository
-git clone <your-repo-url>
-cd <your-repo-folder>
-
-# 2. Install dependencies
-pip install pandas numpy matplotlib seaborn scipy statsmodels scikit-learn jupyter openpyxl
-
-# 3. Export the `train_df` sheet of hospital_readmission_data_xlsx.xlsx
-#    to train_df.csv, in the same folder as the notebook
-
-# 4. Launch the notebook
-jupyter notebook hospital_readmission_analysis_ipynb.ipynb
-```
-
-> [!NOTE]
-> The notebook reads `train_df.csv`. If you prefer to use the Excel file directly, replace the first read line with:
-> `df = pd.read_excel("hospital_readmission_data_xlsx.xlsx")`
 
 ---
 
