@@ -61,7 +61,7 @@ To answer it, the project runs the full analytics pipeline: data cleaning, explo
 
 ```mermaid
 flowchart LR
-    A[🗂️ Raw Data<br/>5,000 patients] --> B[🧹 Cleaning<br/>duplicates · outliers · types]
+    A[🗂️ Raw Data<br/>5,000 patients] --> B[🧹 Cleaning<br/>4 duplicates removed · outliers · types]
     B --> C[📊 EDA<br/>distributions · profiles]
     C --> D[🧪 Hypothesis Tests<br/>t-test · χ² · correlation]
     D --> E[🤖 Modeling<br/>Logistic Regression · Random Forest]
@@ -81,6 +81,8 @@ flowchart LR
 ## 🗃️ Dataset
 
 Each row is one hospital stay. The target is `readmitted`.
+
+> 🧹 **Data cleaning:** the original file has **5,000** records. During cleaning, **4 duplicate observations were removed**, leaving **4,996** unique records. The clusters file is built on this cleaned version.
 
 | Column | Type | Description |
 |---|:---:|---|
@@ -108,8 +110,6 @@ Each row is one hospital stay. The target is `readmitted`.
 | Mean comorbidity score | 2.07 |
 | Most common diagnosis | Kidney Disease |
 | Age distribution | Symmetric (skewness ≈ 0.01), no outliers |
-
-> The notebook removes duplicate records, leaving **4,996** rows. That is the version saved in the clusters file.
 
 </details>
 
@@ -291,12 +291,6 @@ jupyter notebook hospital_readmission_analysis_ipynb.ipynb
 **Hadeer Hussen Atia**
 Statistics graduate · Cairo University, Faculty of Economics & Political Science
 Data Analysis · Econometrics · Python · SQL · R · Power BI
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-profile)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/your-username)
-
-<br/>
 
 ⭐ *If you found this project useful, consider giving it a star!* ⭐
 
